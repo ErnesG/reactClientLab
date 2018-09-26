@@ -23,7 +23,7 @@ class App extends Component {
           </div>
         </header>
         <p className="App-intro">
-         <LandingPage></LandingPage>
+         <Login></Login>
         </p>
       </div>
     );
