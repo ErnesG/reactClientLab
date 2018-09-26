@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FilmDetails from './Components/FilmDetails';
+import PickSeats from './Components/PickSeats';
+import Checkout from './Components/Checkout';
+import Login from './Components/Login';
+import LandingPage from './Components/LandingPage';
+
 
 class App extends Component {
   render() {
@@ -17,7 +23,7 @@ class App extends Component {
           </div>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+         <LandingPage></LandingPage>
         </p>
       </div>
     );
