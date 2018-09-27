@@ -15,8 +15,8 @@ const login = () => {
         // <div style={divStyle}>
         <div className="mdl-grid" style={divStyle}>
 
-            <div class="mdl-cell mdl-cell--4-col"></div>
-            <div class="mdl-cell mdl-cell--4-col">
+            <div className="mdl-cell mdl-cell--4-col"></div>
+            <div className="mdl-cell mdl-cell--4-col">
                 <div className="demo-card-wide mdl-card mdl-shadow--2dp">
                     <div className="mdl-card__title">
                         <h1>Log in</h1>
@@ -42,7 +42,7 @@ const login = () => {
                     </div> */}
                 </div>
             </div>
-            <div class="mdl-cell mdl-cell--4-col"></div>
+            <div className="mdl-cell mdl-cell--4-col"></div>
         </div>
         // </div>
     );

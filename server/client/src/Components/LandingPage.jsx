@@ -1,7 +1,8 @@
 import React from 'react';
 import films from '../films.json';
-import {posterStyle, tagLineStyle, titleStyle} from './css/LandingPage.css';
+import {titleStyle} from './css/LandingPage.css';
 import ShowingDate from './ShowingDate';
+import FilmList from './FilmList';
 /* import poster from '../../public/img/posters/1.png'; */
 const landingPage = ()=>{
     console.log("films are ", films );
@@ -10,21 +11,16 @@ const landingPage = ()=>{
             <h1 style={titleStyle}>What do you want to see?</h1>
             <ShowingDate pickDate={(event)=>chooseDate(event.target.value)}/>
 
-            <section className="filmsList" style={posterStyle}>
-                <section className="film" onClick={()=>{chooseFilm({title:'007 Mexico rises', year:2018})}}>
-                    <div>
-                        <label>movie</label>
-                        {/* <image src=""></image> */}
-                    </div>
-                </section>
-            </section>
+            <FilmList films={films} clicked={(film) => chooseFilm(film)}></FilmList>
         </div>
 
     );
 }
 
-const chooseFilm = (movie) => {
-    console.log(movie);
+const chooseFilm = (film) => {
+    console.log('selected movie');
+    console.log(film);
+    
 }
 const chooseDate = (date) =>{
   console.log(date);
