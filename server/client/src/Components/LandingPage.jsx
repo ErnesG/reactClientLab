@@ -21,6 +21,7 @@ const chooseFilm = (film) => {
     console.log('selected movie');
     console.log(film);
     
+    <Redirect to="/filmdetails"></Redirect>
 }
 const chooseDate = (date) =>{
   console.log(date);

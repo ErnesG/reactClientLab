@@ -6,13 +6,14 @@ import PickSeats from './Components/PickSeats';
 import Checkout from './Components/Checkout';
 import Login from './Components/Login';
 import LandingPage from './Components/LandingPage';
-import {BrowserRouter,Route} from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import NotFound from './Components/NotFound';
 class App extends Component {
   render() {
 
     return (
       <BrowserRouter>
+
         <div className="App">
           <header className="App-header">
 
@@ -24,12 +25,14 @@ class App extends Component {
               <a href="#">Checkout</a>
             </div>
           </header>
-          <Route path="/" exact component={LandingPage}/>
-          <Route path="/pickseats" exact component={PickSeats}/>
-          <Route path="/login" exact component={Login}/>
-          <Route path="/checkout" exact component={Checkout}/>
-          <Route component={NotFound}/>
-
+          <Switch>
+            <Route path="/" exact component={LandingPage} />
+            <Route path="/pickseats/:showing_id" exact component={PickSeats} />
+            <Route path="/login" exact component={Login} />
+            <Route path="/checkout" exact component={Checkout} />
+            <Route path="/filmdetails" exact component={FilmDetails} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
 
       </BrowserRouter>

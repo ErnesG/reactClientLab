@@ -1,12 +1,14 @@
 import React from 'react';
 
-const pickSeats = () => {
+const pickSeats = (props) => {
     /*     A heading that says "Where would you like to sit?". o Movie title
     o Showing date/time
     o Theater name
     o Listing of tables in the theater.
     o Each table has a listing of up to four seats.
     o A "Check out" button */
+    const { showing_id } = props.match.params;
+    console.log(showing_id);
     return (
         <div>
 
