@@ -33,7 +33,7 @@ const login = () => {
                     <input type="password" name="pass" className="mdl-textfield__input" />
                     <br />
 
-                    <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Login</button>
+                    <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick={() => loginIn()}>Login</button>
                     
                     {/* <div className="mdl-card__actions mdl-card--border">
                         <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
@@ -46,5 +46,9 @@ const login = () => {
         </div>
         // </div>
     );
+}
+
+const loginIn = () => {
+    console.log('logging in');
 }
 export default login;

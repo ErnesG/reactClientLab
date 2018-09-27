@@ -23,8 +23,18 @@ class App extends Component {
           </div>
         </header>
         <p className="App-intro">
+         <Login></Login>
+        </p>
+        <p className="App-intro">
          <LandingPage></LandingPage>
         </p>
+        <p className="App-intro">
+         <PickSeats></PickSeats>
+        </p>
+        <p className="App-intro">
+         <Checkout></Checkout>
+        </p>
+
       </div>
     );
   }

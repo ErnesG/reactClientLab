@@ -21,7 +21,7 @@ const checkout = () =>{
                        <td>2</td>
                        <td>1</td>
                        <td>2</td>
-                       <td><button>Purchase</button></td>
+                       <td><button onClick={() => checkoutClick()}>Purchase</button></td>
                    </tr>
                </tbody>
                <tfoot>
@@ -48,4 +48,9 @@ const checkout = () =>{
         </div>
     );
 }
+
+const checkoutClick = () => {
+    console.log('Checking Out');
+}
+
 export default checkout;

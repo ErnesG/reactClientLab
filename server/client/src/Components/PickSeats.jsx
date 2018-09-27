@@ -26,23 +26,28 @@ const pickSeats = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
+                        <td> <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick={() => selectSeat()}>1</button> </td>
+                        <td> <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick={() => selectSeat()}>2</button> </td>
+                        <td> <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick={() => selectSeat()}>3</button> </td>
+                        <td> <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick={() => selectSeat()}>4</button> </td>
                     </tr>
                     <tr>
-                        <td><button>Checkout</button></td>
-                        <td><button>Checkout</button></td>
-                        <td><button>Checkout</button></td>
-                        <td><button>Checkout</button></td>
+                        <td colSpan="4"><button onClick={() => goToCheckout()}>Checkout</button></td>
                     </tr>
-
-
+                    
                 </tbody>
             </table>
         </div>
 
     );
 }
+
+const goToCheckout = () => {
+    console.log('Checkout');
+}
+
+const selectSeat = () => {
+    console.log('Selected seat');
+}
+
 export default pickSeats;
