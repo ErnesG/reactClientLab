@@ -3,6 +3,7 @@ import films from '../films.json';
 import {titleStyle} from './css/LandingPage.css';
 import ShowingDate from './ShowingDate';
 import FilmList from './FilmList';
+import { Redirect } from 'react-router-dom';
 /* import poster from '../../public/img/posters/1.png'; */
 const landingPage = ()=>{
     console.log("films are ", films );
