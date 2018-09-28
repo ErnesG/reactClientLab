@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Redirect } from 'react-router-dom'
 
 const divStyle = {
     margin: '40px',
@@ -10,7 +11,14 @@ const labelStyle = {
 };
 
 
-const login = () => {
+const login = (props) => {
+    console.log(props);
+
+    const loginIn = () => {
+        console.log('logging in');
+        props.history.push('/landing');
+    }
+
     return (
         // <div style={divStyle}>
         <div className="mdl-grid" style={divStyle}>
@@ -35,11 +43,6 @@ const login = () => {
 
                     <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick={() => loginIn()}>Login</button>
                     
-                    {/* <div className="mdl-card__actions mdl-card--border">
-                        <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            Login
-                       </a>
-                    </div> */}
                 </div>
             </div>
             <div className="mdl-cell mdl-cell--4-col"></div>
@@ -48,7 +51,5 @@ const login = () => {
     );
 }
 
-const loginIn = () => {
-    console.log('logging in');
-}
+
 export default login;

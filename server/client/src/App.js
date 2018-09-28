@@ -6,7 +6,7 @@ import PickSeats from './Components/PickSeats';
 import Checkout from './Components/Checkout';
 import Login from './Components/Login';
 import LandingPage from './Components/LandingPage';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import NotFound from './Components/NotFound';
 class App extends Component {
   render() {
@@ -26,12 +26,13 @@ class App extends Component {
             </div>
           </header>
           <Switch>
-            <Route path="/" exact component={LandingPage} />
-            <Route path="/pickseats/:showing_id" exact component={PickSeats} />
-            <Route path="/login" exact component={Login} />
-            <Route path="/checkout" exact component={Checkout} />
-            <Route path="/filmdetails" exact component={FilmDetails} />
-            <Route component={NotFound} />
+            <Route exact path="/landing" component={LandingPage} />
+            <Route exact path="/pickseats/:showing_id" exact component={PickSeats} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/filmdetails" component={FilmDetails} />
+            <Redirect from='/' to='/login' />
+            <Route path="*" component={NotFound} />
           </Switch>
         </div>
 

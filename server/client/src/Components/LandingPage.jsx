@@ -5,7 +5,14 @@ import ShowingDate from './ShowingDate';
 import FilmList from './FilmList';
 import { Redirect } from 'react-router-dom';
 /* import poster from '../../public/img/posters/1.png'; */
-const landingPage = ()=>{
+const landingPage = (props)=>{
+    const chooseFilm = (film) => {
+        console.log('selected movie');
+        console.log(film);
+    
+        props.history.push({pathname: '/filmdetails', state: {film: film}});
+    }
+
     console.log("films are ", films );
     return (
         <div>
@@ -18,12 +25,7 @@ const landingPage = ()=>{
     );
 }
 
-const chooseFilm = (film) => {
-    console.log('selected movie');
-    console.log(film);
-    
-    <Redirect to="/filmdetails"></Redirect>
-}
+
 const chooseDate = (date) =>{
   console.log(date);
 }
